@@ -13,10 +13,10 @@ export class Person extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: false })
   first_name: string;
 
-  @Column()
+  @Column({ nullable: false })
   last_name: string;
 
   @Column({
@@ -29,9 +29,4 @@ export class Person extends BaseEntity {
     length: 10,
   })
   card_number: string;
-
-  @Column({
-    type: "numeric",
-  })
-  balance: number;
 }

@@ -19,6 +19,11 @@ export class Client extends Person {
   is_active: boolean;
 
   @Column({
+    type: "numeric",
+  })
+  balance: number;
+
+  @Column({
     type: "simple-json",
     nullable: true,
   })
